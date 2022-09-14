@@ -17,8 +17,19 @@ function App() {
       setWeather(data)
     }
     fetchWeatherData()
-  }, [])
+  }, [units]);
 
+
+    const handleUnitsClick = (e) => {
+      const button = e.currentTarget;
+      const currentUnit = button.innerText.slice(1)
+
+      const isCelcius = currentUnit === "C"
+
+      button.innerText = isCelcius ? "°F" : "°C"
+      setUnits(isCelcius ? "metric" : "imperial")
+      console.log(currentUnit)
+    }
 
 
   return (
@@ -27,7 +38,7 @@ function App() {
         {weather && (<div className='container'>
           <div className='section section_inputs'>
             <input type="text" name='city' placeholder='Enter City..'></input>
-            <button>°F</button>
+            <button onClick={(e) => handleUnitsClick(e)}>°F</button>
           </div>
 
           <div className="section section_temprature">
@@ -40,7 +51,7 @@ function App() {
               <h1>{`${weather.temp.toFixed()} °${units === "metric" ? "C" : "F"}`}</h1>
             </div>
           </div>
-          <Description weather={weather} units={units}/>
+          <Description weather={weather} units={units} />
         </div>)}
 
       </div>
