@@ -34,6 +34,7 @@ function App() {
   const enterKeyPressed = (e) => {
     if (e.keyCode === 13) {
       setCity(e.currentTarget.value);
+      e.currentTarget.blur()
     }
   }
 
