@@ -1,6 +1,6 @@
 :root {
-  --section-overlay: rgba(0, 0, 0, 0.856);
-  --background-overlay: rgba(0, 0, 0, 0.011);
+  --section-overlay: rgba(21, 19, 19, 0.588);
+  --background-overlay: rgba(0, 0, 0, 0.037);
 }
 
 * {
@@ -44,6 +44,7 @@
 .section_inputs,
 .section_temprature {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   background-color: var(--section-overlay);
@@ -51,7 +52,7 @@
 
 .section_inputs > input {
   border: 0.8px solid white;
-  border-radius: 0.4rem;
+  border-radius: 5rem;
   background-color: transparent;
   color: white;
   padding: 0.5rem;
@@ -66,7 +67,7 @@
 .section_inputs > button {
   padding: 10px 50px;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 5rem;
   font-size: 20px;
   font-weight: 500;
   background-color: white;
@@ -75,7 +76,7 @@
 
 .section_inputs > button:hover {
   cursor: pointer;
-  padding: 10px 70px;
+  padding: 10px 60px;
   transition: ease-in-out 0.2s;
 }
 
